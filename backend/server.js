@@ -14,7 +14,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(cors(
     {
-        origin : "https://atm-application-cs7e.vercel.app/",
+        origin : "https://atm-application-cs7e.vercel.app",
     }
 ));
 app.use(express.json());
