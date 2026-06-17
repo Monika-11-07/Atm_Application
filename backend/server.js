@@ -15,6 +15,11 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 
+// Root health check
+app.get('/', (req, res) => {
+  res.json({ message: 'API Running' });
+});
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
 
